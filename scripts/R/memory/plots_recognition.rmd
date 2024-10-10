@@ -29,22 +29,22 @@ library(MetBrewer)
 # Open data seperately
 ```{r}
 
-dfM <- read.csv("L:/2_Research/2_Analysis_Folder/MemVio//part3_RTout.csv")
+dfm <- read.csv("L:/2_Research/2_Analysis_Folder/MemVio//part3_RTout.csv")
 
-dfW <- read.csv("L:/2_Research/2_Analysis_Folder/Wubbles//part3_RTout.csv")
+dfm <- read.csv("L:/2_Research/2_Analysis_Folder/Wubbles//part3_RTout.csv")
 
 ```
 
 Preparations for dfM
 ```{r}
 
-dfM$pe <- factor(dfM$pe, levels=c("lowPE", "medPE", "highPE")) # pe
+dfm$pe <- factor(dfM$pe, levels=c("lowPE", "medPE", "highPE")) # pe
 
-dfM$participant <- as.factor(dfM$participant) # participants
+dfm$participant <- as.factor(dfM$participant) # participants
 
-dfM$conf <- factor(dfM$conf, levels=c("1", "2", "3", "4")) # confidence
+dfm$conf <- factor(dfM$conf, levels=c("1", "2", "3", "4")) # confidence
 
-dfM <- na.omit(dfM)
+dfm <- na.omit(dfM)
 
 dfM$study <- c("Experiment 1")
 
